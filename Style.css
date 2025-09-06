@@ -1,0 +1,47 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set background and font */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* Container for the Pinterest-style layout */
+.container {
+    column-count: 3; /* 3 columns like Pinterest */
+    column-gap: 15px;
+    padding: 20px;
+}
+
+/* Individual pin (image box) */
+.pin {
+    width: 100%;
+    margin-bottom: 15px;
+    break-inside: avoid; /* Prevents breaking inside columns */
+}
+
+/* Image styling */
+.pin img {
+    width: 100%;
+    border-radius: 10px; /* Rounded corners */
+    display: block;
+}
+
+/* Responsive layout for tablets */
+@media (max-width: 800px) {
+    .container {
+        column-count: 2;
+    }
+}
+
+/* Responsive layout for mobile phones */
+@media (max-width: 500px) {
+    .container {
+        column-count: 1;
+    }
+}
