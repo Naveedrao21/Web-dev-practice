@@ -1,47 +1,37 @@
-/* Reset default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Set background and font */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+  background-color: lightgray;   
+  font-family: Arial, sans-serif;
+}
+header {
+  background-color: navy;  /* header ka background navy blue hoga */
+  color: white;            /* text white hoga */
+  text-align: center;      /* heading aur paragraph center me aayenge */
+  padding: 20px;           /* andar thoda space add hoga */
 }
 
-/* Container for the Pinterest-style layout */
-.container {
-    column-count: 3; /* 3 columns like Pinterest */
-    column-gap: 15px;
-    padding: 20px;
+h1 {
+    color: wheat;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 36px;
+    text-shadow: 2px 2px 4px #aaa;
 }
-
-/* Individual pin (image box) */
-.pin {
-    width: 100%;
-    margin-bottom: 15px;
-    break-inside: avoid; /* Prevents breaking inside columns */
+p {
+    color: rgb(40, 197, 124);
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 20px;
+    text-align: center;
 }
-
-/* Image styling */
-.pin img {
-    width: 100%;
-    border-radius: 10px; /* Rounded corners */
-    display: block;
+nav {
+    background-color: #e81414;
+    padding: 10px;
+    alighn-items: center;
+    text-align: center;
 }
-
-/* Responsive layout for tablets */
-@media (max-width: 800px) {
-    .container {
-        column-count: 2;
-    }
-}
-
-/* Responsive layout for mobile phones */
-@media (max-width: 500px) {
-    .container {
-        column-count: 1;
-    }
+nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
 }
