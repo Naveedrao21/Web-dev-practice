@@ -1,37 +1,79 @@
 body {
-  background-color: lightgray;   
+  background-color: lightgray;
   font-family: Arial, sans-serif;
 }
 header {
-  background-color: navy;  /* header ka background navy blue hoga */
-  color: white;            /* text white hoga */
-  text-align: center;      /* heading aur paragraph center me aayenge */
-  padding: 20px;           /* andar thoda space add hoga */
-}
+  background-color: navy;
+  text-align: center;
+  color: white;
+  padding: 20px;
 
-h1 {
-    color: wheat;
-    text-align: center;
-    margin-top: 50px;
-    font-size: 36px;
-    text-shadow: 2px 2px 4px #aaa;
-}
-p {
-    color: rgb(40, 197, 124);
-    font-size: 18px;
-    line-height: 1.6;
-    margin: 20px;
-    text-align: center;
 }
 nav {
-    background-color: #e81414;
-    padding: 10px;
-    alighn-items: center;
-    text-align: center;
+  background-color: red;
+  padding: 10px;
+  text-align: center;
 }
 nav a {
-    color: whitesmoke;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
+  color: white;
+  margin: 15px;
+  front-weight: bold;
+  text-decoration: none;
 }
+nav a:hover {
+  color: yellowgreen;
+  text-decoration: underline;
+}
+section {
+  margin: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  footer {
+    background-color: gray;
+    text-align: center;
+    padding: 10px
+  }
+  img {
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  table, th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+  th {
+    background-color: lightblue;
+  }
+  form {
+    display: flex;
+    
+    flex-direction: column;
+    width: 300px;
+  }
+  input, textarea {
+    border: 1px solid gray;
+    border-radius: 4px;
+  }
+  input[type="submit"] { 
+    background-color: navy;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+   }
+   input[type="submit"]:hover {
+    background-color: darkblue;
+   }
