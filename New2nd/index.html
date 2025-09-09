@@ -1,19 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Responsive Site — Template</title>
+  <!-- Minimal, clean single-file template. Copy this into index.html and open in browser. -->
+  <style>
+    :root{
+      --bg: #0f172a;
+      --card: #0b1220;
+      --muted: #9aa4b2;
+      --accent: #6ee7b7;
+      --accent-2: #60a5fa;
+      --glass: rgba(255,255,255,0.04);
+      --radius: 14px;
+      --maxw: 1100px;
+      --gap: 1.25rem;
+      --ff: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--ff);
+      background: linear-gradient(180deg,#071024 0%, #071a2b 100%);
+      color: #e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:2rem 1rem;
+    }
+    .wrap{max-width:var(--maxw);margin:0 auto}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:2.5rem}
+    .brand{display:flex;align-items:center;gap:0.75rem}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;font-weight:700}
+    .brand h1{font-size:1.05rem;margin:0}
+    nav{display:flex;gap:1rem;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;padding:0.35rem 0.6rem;border-radius:8px}
+    nav a:hover{color:var(--accent);background:var(--glass)}
+    .cta{padding:0.55rem 0.9rem;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#022;border:none;border-radius:10px;cursor:pointer;font-weight:600}
+
+    /* Mobile nav */
+    .menu-toggle{display:none;background:transparent;border:1px solid rgba(255,255,255,0.06);padding:0.35rem;border-radius:8px;color:var(--muted)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center;padding:2rem;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:var(--radius);box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+    .hero h2{margin:0 0 0.5rem 0;font-size:clamp(1.6rem,3.6vw,2.4rem)}
+    .hero p{margin:0 0 1.2rem 0;color:var(--muted)}
+    .hero .actions{display:flex;gap:0.8rem}
+
+    /* Floating card (visual interest) */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    .demo-card{transform-origin:center;animation:float 6s ease-in-out infinite}
+    @keyframes float{0%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-10px) rotate(1deg)}100%{transform:translateY(0) rotate(-1deg)}}
+    .demo-card .title{font-weight:700;margin-bottom:0.3rem}
+    .demo-card .line{color:var(--muted);font-size:0.92rem}
+
+    /* Features */
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--gap);margin-top:1.5rem}
+    .feature{background:var(--card);padding:1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .feature h3{margin:0 0 0.5rem 0}
+    .feature p{margin:0;color:var(--muted);font-size:0.95rem}
+
+    /* Footer */
+    footer{margin-top:2.25rem;text-align:center;color:var(--muted);font-size:0.92rem}
+
+    /* Responsive tweaks */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .menu-toggle{display:inline-flex}
+      nav{display:none}
+      .hero{padding:1.25rem}
+    }
+
+    @media (max-width:480px){
+      body{padding:1rem}
+      .brand h1{font-size:0.96rem}
+      .logo{width:40px;height:40px}
+    }
+  </style>
 </head>
 <body>
-    <details
-        <summary></summary>
-        <ul class="menu">
-            <li>Home</li>
-            <li>About</li>
-            <li>contact</li>
-            <li>services</li>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">W</div>
+        <div>
+          <h1>WaqtSite</h1>
+          <div style="font-size:12px;color:var(--muted)">Simple • Fast • Responsive</div>
+        </div>
+      </div>
 
-        </ul>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+        <button class="cta" onclick="alert('Call to action')">Get Started</button>
+      </nav>
+
+      <button class="menu-toggle" aria-expanded="false" aria-label="Open menu" onclick="toggleNav(this)">☰</button>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <h2 id="hero-title">Clean, responsive website template<br/>for quick projects</h2>
+          <p>Ye template simple aur modern design rakhta hai—fast load, mobile-friendly, aur aasan customize hone wala. Start karne ke liye copy-paste karo aur apne content se replace karo.</p>
+
+          <div class="actions">
+            <button class="cta" onclick="alert('Start building')">Use this template</button>
+            <a href="#features" style="align-self:center;color:var(--muted);text-decoration:none">See features →</a>
+          </div>
+
+          <div class="features" style="margin-top:1.5rem">
+            <div class="feature">
+              <h3>Responsive</h3>
+              <p>Flex and Grid based layout — works on phones, tablets, and desktop.</p>
+            </div>
+            <div class="feature">
+              <h3>Lightweight</h3>
+              <p>Minimal CSS, no libraries required — quick to understand and edit.</p>
+            </div>
+            <div class="feature">
+              <h3>Animated</h3>
+              <p>Subtle animation (GPU-friendly) to give polish without heavy code.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card demo-card" role="img" aria-label="Demo floating card">
+            <div class="title">Project Card</div>
+            <div class="line">A short description of your project goes here. Keep it concise.</div>
+            <div style="margin-top:0.8rem;display:flex;gap:0.5rem">
+              <button class="cta" style="padding:0.4rem 0.6rem;font-size:0.9rem">View</button>
+              <button style="padding:0.4rem 0.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted)">Share</button>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="features" style="margin-top:2rem">
+        <h3 style="margin-bottom:0.75rem">More features</h3>
+        <div class="features">
+          <div class="feature"><h3>Accessible</h3><p>Semantics and sensible contrast for readability.</p></div>
+          <div class="feature"><h3>Easy to customize</h3><p>Change colors in :root and update fonts — done.</p></div>
+          <div class="feature"><h3>Ready for enhancements</h3><p>Add animations, SVGs, or Lottie files later as you learn.</p></div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:2rem">
+        <h3>Contact</h3>
+        <p style="color:var(--muted)">Replace with your contact info, or add a simple form. Example below:</p>
+        <form style="display:flex;flex-direction:column;gap:0.6rem;max-width:520px">
+          <input placeholder="Your name" style="padding:0.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+          <input placeholder="Email" style="padding:0.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+          <textarea placeholder="Message" rows="4" style="padding:0.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+          <div>
+            <button class="cta" type="button" onclick="alert('Message sent (demo)')">Send</button>
+          </div>
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>Made with ❤️ • Simple template — customize as you like</div>
+    </footer>
+  </div>
+
+  <script>
+    function toggleNav(btn){
+      const nav = document.querySelector('nav');
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      if(nav.style.display === 'flex') nav.style.display = 'none';
+      else nav.style.display = 'flex';
+    }
+  </script>
 </body>
 </html>

@@ -1,0 +1,39 @@
+
+
+body {
+  display: flex;
+  justify-content: center;  /* horizontal center */
+  align-items: center;      /* vertical center */
+  height: 100vh;            /* full screen height */
+  margin: 0;
+}
+
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 300px;
+  padding: 60px;
+  gap: 20px; 
+  font-size: 40px; 
+  background-color: gray;
+}
+.icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  gap: 20px;
+  font-size: 40px;
+}
+.icons a {
+    color: white;
+    transition: 0.3s
+}
+ .icons a:hover {
+      text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+    }
