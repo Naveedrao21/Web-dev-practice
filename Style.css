@@ -1,81 +1,47 @@
-body {
-  background-color: lightgray;
-  font-family: Arial, sans-serif;
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-header {
-  background-color: navy;
-  text-align: center;
-  color: white;
-  padding: 20px;
 
+/* Set background and font */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
 }
-nav {
-  background-color: red;
-  padding: 10px;
-  text-align: center;
+
+/* Container for the Pinterest-style layout */
+.container {
+    column-count: 3; /* 3 columns like Pinterest */
+    column-gap: 15px;
+    padding: 20px;
 }
-nav a {
-  color: white;
-  margin: 15px;
-  front-weight: bold;
-  text-decoration: none;
-}
-nav a:hover {
-  color: yellowgreen;
-  text-decoration: underline;
-}
-section {
-  margin: 20px;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-  footer {
-    background-color: gray;
-    text-align: center;
-    padding: 10px
-  }
-  img {
-    border: 2px solid black;
-    border-radius: 8px;
-    margin-top: 10px;
-    max-width: 100%;
-    height: auto;
-    
-  }
-  table {
+
+/* Individual pin (image box) */
+.pin {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  table, th, td {
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
-  }
-  th {
-    background-color: lightblue;
-  }
-  form {
-    display: flex;
-    
-    flex-direction: column;
-    width: 300px;
-  }
-  input, textarea {
-    margin-bottom: 7px;
-    padding: 6px;
-    border: 1px solid gray;
-    border-radius: 4px;
-  }
-  input[type="submit"] { 
-    background-color: navy;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-   }
-   input[type="submit"]:hover {
-    background-color: darkblue;
-   }
+    margin-bottom: 15px;
+    break-inside: avoid; /* Prevents breaking inside columns */
+}
+
+/* Image styling */
+.pin img {
+    width: 100%;
+    border-radius: 10px; /* Rounded corners */
+    display: block;
+}
+
+/* Responsive layout for tablets */
+@media (max-width: 800px) {
+    .container {
+        column-count: 2;
+    }
+}
+
+/* Responsive layout for mobile phones */
+@media (max-width: 500px) {
+    .container {
+        column-count: 1;
+    }
+}

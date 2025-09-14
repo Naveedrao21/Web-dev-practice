@@ -1,0 +1,81 @@
+body {
+  background-color: lightgray;
+  font-family: Arial, sans-serif;
+}
+header {
+  background-color: navy;
+  text-align: center;
+  color: white;
+  padding: 20px;
+
+}
+nav {
+  background-color: red;
+  padding: 10px;
+  text-align: center;
+}
+nav a {
+  color: white;
+  margin: 15px;
+  front-weight: bold;
+  text-decoration: none;
+}
+nav a:hover {
+  color: yellowgreen;
+  text-decoration: underline;
+}
+section {
+  margin: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  footer {
+    background-color: gray;
+    text-align: center;
+    padding: 10px
+  }
+  img {
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  table, th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+  th {
+    background-color: lightblue;
+  }
+  form {
+    display: flex;
+    
+    flex-direction: column;
+    width: 300px;
+  }
+  input, textarea {
+    margin-bottom: 7px;
+    padding: 6px;
+    border: 1px solid gray;
+    border-radius: 4px;
+  }
+  input[type="submit"] { 
+    background-color: navy;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+   }
+   input[type="submit"]:hover {
+    background-color: darkblue;
+   }
