@@ -1,38 +1,4 @@
-* {
-    color: red;
+
+.box {
+    margin:8px 0;
 }
-div {
-    color: green;
-}
-.Horsuna {
-    color:black;
-}
-#tired {
-    color:rgb(127, 127, 109);
-    background-color: yellow;
-}
-.read {
-    color: white;
-    background-color: black;
-    padding: 10px;
-    border-radius: 6px;
-    margin-bottom: 5px;
-}
-.unread {
-    color: black;
-    background-color: lightgrey;
-    padding: 10px;
-    border-radius: 6px;
-    margin-bottom: 5px;
-}
-.subsection.header {
-    background-color: lightblue;
-    color: black;
-    padding: 7px;
-    border-radius: 6px;
-    margin-bottom: 5px;
-}
-.subsection .header {
-    background-color: lightgreen;
-    padding: 10px;
-  }
