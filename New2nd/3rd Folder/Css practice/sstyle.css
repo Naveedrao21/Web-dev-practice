@@ -3,6 +3,12 @@ div {
     padding: 10px;
     margin: 10px;
 }
-.ancestor .parent .child {
+.ancestor .parent .child1 {
     background-color: yellow;
+}
+.child2 {
+    background-color: orange;
+}
+.parent {
+    background-color: lightgray;
 }
