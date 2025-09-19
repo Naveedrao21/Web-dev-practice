@@ -16,3 +16,11 @@
     border-radius: 10px;
     padding: 10px;
 }
+.subsection.header {
+    background-color: lightblue;
+    border: 2px solid blue;
+}
+.subsection .header {
+    background-color: lightgreen;
+    border: 2px solid green;
+    margin: 5px;}
