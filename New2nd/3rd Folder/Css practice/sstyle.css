@@ -25,3 +25,14 @@ div {
     border-radius: 6px;
     margin-bottom: 5px;
 }
+.subsection.header {
+    background-color: lightblue;
+    color: black;
+    padding: 7px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+.subsection .header {
+    background-color: lightgreen;
+    padding: 10px;
+  }
