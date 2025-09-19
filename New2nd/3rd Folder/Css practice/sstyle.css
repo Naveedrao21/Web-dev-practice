@@ -11,14 +11,17 @@ div {
     color:rgb(127, 127, 109);
     background-color: yellow;
 }
-.read,
-.unread {
-  color: white;
-  background-color: black;
-}
-.read{
-    background-color: gray;
-    color:violet
+.read {
+    color: white;
+    background-color: black;
     padding: 10px;
-    margin: 10px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+.unread {
+    color: black;
+    background-color: lightgrey;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 5px;
 }
